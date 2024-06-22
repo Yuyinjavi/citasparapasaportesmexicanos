@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Pasaportes mexicanos">
+        <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <link rel="icon" type="image/x-icon" href="imagenes/logo-new.png">
+    <base href="">
+    <title>CITAS PARA PASAPORTES MEXICANOS</title>
+    <meta name="description" content="Sistema De Citas Para Pasaporte Mexicano">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, User-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="Citconsular" />
+
+
+    <meta name="msapplication-TileColor" content="#ffffff" />
+
+
+    <meta name="theme-color" content="#31649F" />
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Pasaporte mexicano</h1>
+    </header>
+
+    <section>
+        <article>
+            <div class="container">
+                <h2><center>Pasaporte Mexicano</center></h2>
+
+                <div class="image-container">
+                    <img class="centered-image" src="logo-new.png" alt="Imagen Ejemplo">
+                </div>
+                <div>
+                    <h2><center>Solicitud De Pasaportes</center></h2>
+                    <h4><center>Estado Donde Deseas Tu Cita</center></h4>
+                </div> <center>
+                    <style>
+                    
+                        .selector-container {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            width: 70%; /* Ajusta el ancho del contenedor de los selectores */
+                        }
+                    
+                        .selector-container select {
+                            width: 100%; /* Ajusta el ancho de los selectores */
+                            margin-right: 10px; /* Espacio entre los selectores */
+                        }
+                    
+                        /* Estilos adicionales según sea necesario */
+                    </style>
+                    <script>
+                    function mostrarDelegaciones() {
+                        var estado = document.getElementById("estado").value;
+                        var delegaciones = {
+                            "Aguascalientes": ["Oficina Central", "Oficina de Enlace Calvillo, Ags.", "Oficina de Enlace Calvillo, Ags", "Oficina de Enlace Juchipila, Zac"],
+                            "Baja California": ["Delegación Tijuana", "Oficina Cenral", "Oficina de Enlace Mexicali, B. C.", "Oficina de Enlace San Luis Río Colorado, Son"],
+                            "Baja California Sur": ["Delegación Baja California Sur"],
+                            "Coahuila": ["Oficina Central", "Oficina de Enlace Municipal en Gómez Palacio, Dgo.", "Oficina de Enlace Municipal en Acuña, Coahuila.", "Oficina de Enlace Municipal en Monclova, Coah.", "Oficina de Enlace Municipal en Piedras Negras, Coah.", "Oficina de Enlace San Juan de Sbinas, Coah.", "Oficina de Enlace Municipal en Saltillo, Coah."],
+                            "Campeche": ["Oficina Central", "Oficina de Enlace Municipal en Cd. Del Carmen, Camp"],
+                            "Chiapas": ["Tuxtla Gutiérrez", "Tapachula", "San Cristóbal de las Casas", "Palenque", "Comitán de Domínguez"],
+                            "Chihuahua": ["Chihuahua", "Ciudad Juárez", "Delicias", "Cuauhtémoc", "Parral"],
+                            "Ciudad de México": ["Álvaro Obregón", "Azcapotzalco", "Benito Juárez", "Coyoacán", "Cuajimalpa de Morelos", "Cuauhtémoc", "Gustavo A. Madero", "Iztacalco", "Iztapalapa", "La Magdalena Contreras", "Miguel Hidalgo", "Milpa Alta", "Tláhuac", "Tlalpan", "Venustiano Carranza", "Xochimilco"],
+                            
+                            // Añadir más estados y sus delegaciones según sea necesario
+                        };
+                        var delegacionesDiv = document.getElementById("delegaciones");
+                        delegacionesDiv.innerHTML = "";
+                        if (delegaciones[estado]) {
+                            var delegacionesArray = delegaciones[estado];
+                            for (var i = 0; i < delegacionesArray.length; i++) {
+                                var option = document.createElement("option");
+                                option.text = delegacionesArray[i];
+                                delegacionesDiv.appendChild(option);
+                            }
+                        } else {
+                            var option = document.createElement("option");
+                            option.text = "Selecciona un estado primero";
+                            delegacionesDiv.appendChild(option);
+                        }
+                    }
+                    </script>
+                    </head>
+                    <body>
+                    
+                    <div class="container">
+                        <div class="selector-container">
+                            <label for="estado">Selecciona un estado:</label>
+                            <select id="estado" name="estado" onchange="mostrarDelegaciones()">
+                                <option value="Aguascalientes">Aguascalientes</option>
+                                <option value="Baja California">Baja California</option>
+                                <option value="Baja California Sur">Baja California Sur</option>
+                                <option value="Campeche">Campeche</option>
+                                <option value="Chiapas">Chiapas</option>
+                                <option value="Chihuahua">Chihuahua</option>
+                                <option value="Ciudad de México">Ciudad de México</option>
+                                <!-- Agregar más estados según sea necesario -->
+                            </select>
+                    
+                            <label for="delegaciones">Delegaciones:</label>
+                            <select id="delegaciones" name="delegaciones">
+                                <option value="">Selecciona un estado primero</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button _ngcontent-aud-c1="" class="btn btn-continuar">Confirmar y Continuar</button> <!-- Botón principal con función onclick -->
+                        <div id="myDropdown" class="dropdown-content">
+                          <a href="pagina4.html" onclick="optionClicked(1)"></a>
+                        </div>
+                      </div>
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="keywords" content="Pasaportes mexicanos">
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="pragma" content="no-cache" />
+<link rel="icon" type="image/x-icon" href="imagenes/logo-new.png">
+<base href="">
+<title>CITAS PARA PASAPORTES MEXICANOS</title>
+<meta name="description" content="Sistema De Citas Para Pasaporte Mexicano">
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0, maximum-scale=1.0, User-scalable=no"
+/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-mobile-web-app-title" content="Citconsular" />
+
+
+<meta name="msapplication-TileColor" content="#ffffff" />
+
+
+<meta name="theme-color" content="#31649F" />
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<header>
+<h1>Pasaporte mexicano</h1>
+</header>
+
+<section>
+<article>
+    <div class="container">
+        <h2><center>Pasaporte Mexicano</center></h2>
+
+        <div class="image-container">
+            <img class="centered-image" src="logo-new.png" alt="Imagen Ejemplo">
+        </div>
+        <div>
+            <h2><center>Solicitud De Pasaportes</center></h2>
+            <h4><center>Selecciona El Día De Tu Cita</center></h4>
+        </div> <center>
+            
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+    }
+    .calendar {
+        width: 300px;
+        margin: 0 auto;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        margin-bottom: 20px;
+    }
+    .calendar-header {
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .calendar-header h2 {
+        margin: 0;
+    }
+    .calendar-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    .calendar-table th,
+    .calendar-table td {
+        border: 1px solid #ccc;
+        padding: 5px;
+        text-align: center;
+        cursor: pointer;
+    }
+    .calendar-table th {
+        background-color: #f0f0f0;
+    }
+    .calendar-table td {
+        height: 60px;
+    }
+    .available {
+        background-color: lightgreen;
+    }
+    .limited {
+        background-color: #ffeeba;
+    }
+    .unavailable {
+        background-color: lightcoral;
+        color: white;
+    }
+    .selected {
+        background-color: #007bff;
+        color: white;
+    }
+    .button-container {
+        text-align: center;
+        margin-top: 10px;
+    }
+    .button-container button {
+        padding: 8px 16px;
+        margin: 0 5px;
+        cursor: pointer;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+    }
+    .button-container button:hover {
+        background-color: #0056b3;
+    }
+</style>
+<title>Calendario de Disponibilidad</title>
+</head>
+<body>
+
+<div class="calendar">
+    
+    <div class="button-container">
+        <button onclick="previousMonth()">Mes Anterior</button>
+        <h2 id="monthYear">Julio 2024</h2>
+        <button onclick="nextMonth()">Siguiente Mes</button>
+    </div>
+    <table class="calendar-table">
+        <thead>
+            <tr>
+                <th>Domingo</th>
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miércoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+                <th>Sábado</th>
+            </tr>
+        </thead>
+        <tbody id="calendarBody">
+            <!-- Contenido del calendario se actualizará dinámicamente -->
+        </tbody>
+    </table>
+</div>
+
+
+
+<script>
+    // Inicializamos el calendario para julio 2024
+    let currentMonth = 6; // Julio es el mes 6 (los meses en JavaScript van de 0 a 11)
+    const months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+    const calendarBody = document.getElementById("calendarBody");
+    const monthYear = document.getElementById("monthYear");
+
+    function renderCalendar(month) {
+        let date = new Date(2024, month, 1);
+        let daysInMonth = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
+        let firstDay = date.getDay();
+
+        calendarBody.innerHTML = "";
+
+        // Crear las filas para el calendario
+        let dateCounter = 1;
+        for (let i = 0; i < 6; i++) {
+            let row = document.createElement("tr");
+            for (let j = 0; j < 7; j++) {
+                if (i === 0 && j < firstDay) {
+                    let cell = document.createElement("td");
+                    row.appendChild(cell);
+                } else if (dateCounter <= daysInMonth) {
+                    let cell = document.createElement("td");
+                    cell.textContent = dateCounter;
+
+                    // Ejemplo de disponibilidad según el día (personalizable)
+                    if (dateCounter === 5 || dateCounter === 10 || dateCounter === 19) {
+                        cell.className = "unavailable";
+                        cell.innerHTML += "<br><span style='font-size: 10px;'>Cita</span>";
+                    } else if (dateCounter === 4 || dateCounter === 14 || dateCounter === 21) {
+                        cell.className = "limited";
+                        cell.innerHTML += "<br><span style='font-size: 10px;'>Sujeto a disponibilidad</span>";
+                    } else {
+                        cell.className = "available";
+                        cell.innerHTML += "<br><span style='font-size: 10px;'>Disponible</span>";
+                        cell.onclick = function() {
+                            selectDay(cell);
+                        };
+                    }
+
+                    row.appendChild(cell);
+                    dateCounter++;
+                }
+            }
+            calendarBody.appendChild(row);
+        }
+
+        // Actualizar el encabezado con el mes y año actual
+        monthYear.textContent = months[month] + " 2024";
+    }
+
+    // Función para seleccionar un día del calendario
+    function selectDay(cell) {
+        // Deseleccionar todos los días previamente seleccionados
+        let selectedCells = document.querySelectorAll(".selected");
+        selectedCells.forEach(function(selectedCell) {
+            selectedCell.classList.remove("selected");
+        });
+
+        // Seleccionar el día clickeado
+        cell.classList.add("selected");
+    }
+
+    // Función para avanzar al siguiente mes
+    function nextMonth() {
+        currentMonth++;
+        if (currentMonth > 11) {
+            currentMonth = 0;
+        }
+        renderCalendar(currentMonth);
+    }
+
+    // Función para retroceder al mes anterior
+    function previousMonth() {
+        currentMonth--;
+        if (currentMonth < 0) {
+            currentMonth = 11;
+        }
+        renderCalendar(currentMonth);
+    }
+
+    // Renderizar el calendario inicialmente para julio 2024
+    renderCalendar(currentMonth);
+</script>
+<div _ngcontent-ulx-c4="" class="form-group"><label _ngcontent-ulx-c4="" for="usr">Selecciona El Horario De Tu Preferencia</label><select _ngcontent-ulx-c4="" class="form-control date-picker ng-valid ng-dirty ng-touched" id="horarios" name="horarios"><option _ngcontent-ulx-c4="" disabled="" value="">Selecciona Un Horario</option><!----><option _ngcontent-ulx-c4="" value="8:30 AM" class="ng-star-inserted">8:30 AM</option><option _ngcontent-ulx-c4="" value="9:00 AM" class="ng-star-inserted">9:00 AM</option><option _ngcontent-ulx-c4="" value="9:30 AM" class="ng-star-inserted">9:30 AM</option><option _ngcontent-ulx-c4="" value="10:00 AM" class="ng-star-inserted">10:00 AM</option><option _ngcontent-ulx-c4="" value="10:30 AM" class="ng-star-inserted">10:30 AM</option><option _ngcontent-ulx-c4="" value="11:00 AM" class="ng-star-inserted">11:00 AM</option><option _ngcontent-ulx-c4="" value="11:30 AM" class="ng-star-inserted">11:30 AM</option><option _ngcontent-ulx-c4="" value="12:00 PM" class="ng-star-inserted">12:00 PM</option><option _ngcontent-ulx-c4="" value="12:30 PM" class="ng-star-inserted">12:30 PM</option><option _ngcontent-ulx-c4="" value="1:00 PM" class="ng-star-inserted">1:00 PM</option><option _ngcontent-ulx-c4="" value="1:30 PM" class="ng-star-inserted">1:30 PM</option><option _ngcontent-ulx-c4="" value="2:00 PM" class="ng-star-inserted">2:00 PM</option><option _ngcontent-ulx-c4="" value="2:30 PM" class="ng-star-inserted">2:30 PM</option><option _ngcontent-ulx-c4="" value="3:00 PM" class="ng-star-inserted">3:00 PM</option></select></div>
+<div class="dropdown">
+    <button _ngcontent-aud-c1="" class="btn btn-continuar">Confirmar y Continuar</button> <!-- Botón principal con función onclick -->
+    <div id="myDropdown" class="dropdown-content">
+      <a href="pagina5.html" onclick="optionClicked(1)"></a>
+    </div>
+  </div>
+</body>
+</html>

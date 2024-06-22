@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Pasaportes mexicanos">
+        <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <link rel="icon" type="image/x-icon" href="imagenes/logo-new.png">
+    <base href="">
+    <title>CITAS PARA PASAPORTES MEXICANOS</title>
+    <meta name="description" content="Sistema De Citas Para Pasaporte Mexicano">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, User-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="Citconsular" />
+
+
+    <meta name="msapplication-TileColor" content="#ffffff" />
+
+
+    <meta name="theme-color" content="#31649F" />
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Pasaporte mexicano</h1>
+    </header>
+
+    <section>
+        <article>
+            <div class="container">
+                <h2><center>Pasaporte Mexicano</center></h2>
+                <div class="image-container">
+                    <img class="centered-image" src="logo-new.png" alt="Imagen Ejemplo">
+                </div>
+                <div>
+                    <h2><center>Solicitud De Pasaportes</center></h2>
+                    <h3><center>Ingresa el CURP de Cada Persona</center></h3>
+                </div> <center>
+
+                 <div _ngcontent-aud-c3="" class="col-md-12"><!----><h4 _ngcontent-aud-c3="">Ingresa el Curp de la Persona 1</h4><!----><input _ngcontent-aud-c3="" aria-hidden="true" autofocus="" class="form-control input2 ng-pristine ng-valid ng-touched" id="curp" maxlength="18" placeholder="Ingresa Curp" type="text"><!----><!----></div>
+
+                 <div class="dropdown">
+                    <button _ngcontent-aud-c1="" class="btn btn-continuar">Regresar</button> <!-- Botón principal con función onclick -->
+                    <div id="myDropdown" class="dropdown-content">
+                      <a href="index.html" onclick="optionClicked(1)"></a>
+                    </div>
+                  </div>
+                
+                  <script>
+                    function toggleDropdown() {
+                      document.getElementById("myDropdown").classList.toggle("show"); // Función para mostrar/ocultar el menú desplegable
+                    }
+                    
+                    function optionClicked(option) {
+
+                       // Redirige a la página correspondiente según la opción seleccionada
+                     switch (option) {
+                    case 'Página 0':
+                    window.location.href = 'index.html';
+                    break;
+                    default:
+
+      }
+    }
+                
+                    // Cierra el menú si el usuario hace clic fuera de él
+                    window.onclick = function(event) {
+                      if (!event.target.matches('.dropbtn')) {
+                        var dropdowns = document.getElementsByClassName("dropdown-content");
+                        for (var i = 0; i < dropdowns.length; i++) {
+                          var openDropdown = dropdowns[i];
+                          if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                          }
+                        }
+                      }
+                    }
+                  </script>
+
+                 <div class="dropdown"><center>
+                    <button _ngcontent-aud-c1="" class="btn btn-continuar">Continuar</button> <!-- Botón principal con función onclick -->
+                    <div id="myDropdown" class="dropdown-content">
+                      <a href="pagina2.html" onclick="optionClicked(1)"></a>
+                    </div>
+                  </div></center>
+                
+                  <script>
+                    function toggleDropdown() {
+                      document.getElementById("myDropdown").classList.toggle("show"); // Función para mostrar/ocultar el menú desplegable
+                    }
+                    
+                    function optionClicked(option) {
+
+                       // Redirige a la página correspondiente según la opción seleccionada
+                     switch (option) {
+                    case 'Página 2':
+                    window.location.href = 'pagina2.html';
+                    break;
+                    default:
+
+      }
+    }
+                
+                    // Cierra el menú si el usuario hace clic fuera de él
+                    window.onclick = function(event) {
+                      if (!event.target.matches('.dropbtn')) {
+                        var dropdowns = document.getElementsByClassName("dropdown-content");
+                        for (var i = 0; i < dropdowns.length; i++) {
+                          var openDropdown = dropdowns[i];
+                          if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                          }
+                        }
+                      }
+                    }
+                  </script>
+ 
+
+
+                    </body>
+                    </html>
