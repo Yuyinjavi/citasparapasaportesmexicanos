@@ -237,9 +237,44 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, User-scalable
 </script>
 <div _ngcontent-ulx-c4="" class="form-group"><label _ngcontent-ulx-c4="" for="usr">Selecciona El Horario De Tu Preferencia</label><select _ngcontent-ulx-c4="" class="form-control date-picker ng-valid ng-dirty ng-touched" id="horarios" name="horarios"><option _ngcontent-ulx-c4="" disabled="" value="">Selecciona Un Horario</option><!----><option _ngcontent-ulx-c4="" value="8:30 AM" class="ng-star-inserted">8:30 AM</option><option _ngcontent-ulx-c4="" value="9:00 AM" class="ng-star-inserted">9:00 AM</option><option _ngcontent-ulx-c4="" value="9:30 AM" class="ng-star-inserted">9:30 AM</option><option _ngcontent-ulx-c4="" value="10:00 AM" class="ng-star-inserted">10:00 AM</option><option _ngcontent-ulx-c4="" value="10:30 AM" class="ng-star-inserted">10:30 AM</option><option _ngcontent-ulx-c4="" value="11:00 AM" class="ng-star-inserted">11:00 AM</option><option _ngcontent-ulx-c4="" value="11:30 AM" class="ng-star-inserted">11:30 AM</option><option _ngcontent-ulx-c4="" value="12:00 PM" class="ng-star-inserted">12:00 PM</option><option _ngcontent-ulx-c4="" value="12:30 PM" class="ng-star-inserted">12:30 PM</option><option _ngcontent-ulx-c4="" value="1:00 PM" class="ng-star-inserted">1:00 PM</option><option _ngcontent-ulx-c4="" value="1:30 PM" class="ng-star-inserted">1:30 PM</option><option _ngcontent-ulx-c4="" value="2:00 PM" class="ng-star-inserted">2:00 PM</option><option _ngcontent-ulx-c4="" value="2:30 PM" class="ng-star-inserted">2:30 PM</option><option _ngcontent-ulx-c4="" value="3:00 PM" class="ng-star-inserted">3:00 PM</option></select></div>
 <div class="dropdown">
-    <button _ngcontent-aud-c1="" class="btn btn-continuar">Confirmar y Continuar</button> <!-- Botón principal con función onclick -->
-    <div id="myDropdown" class="dropdown-content">
-      <a href="pagina5.html" onclick="optionClicked(1)"></a>
+    <style>
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .btn-siguiente {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none; /* Eliminamos la decoración de texto */
+        }
+        .btn-siguiente:hover {
+            background-color: #0056b3; /* Cambio de color al pasar el ratón */
+        }
+    </style>
+    </head>
+    <body>
+        <div class="container">
+    
+            <!-- Botón Siguiente -->
+            <a href="pagina5.html" class="btn-siguiente">Confirmar y Continuar</a>
+        </div>
+
+        <div class="container">
+    
+            <!-- Botón Siguiente -->
+            <a href="pagina3.html" class="btn-siguiente">Regresar</a>
+        </div>
     </div>
   </div>
 </body>

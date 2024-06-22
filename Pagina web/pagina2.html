@@ -55,46 +55,51 @@
                         <div class="dropdown">
                             <button onclick="toggleDropdown()">Seleccionar Ubicacion</button> <!-- Botón principal con función onclick -->
                             <div id="myDropdown" class="dropdown-content">
-                              <a href="pagina3.html" onclick="optionClicked(1)">México</a>
+                              <a href="#" onclick="optionClicked(1)">México</a>
                             </div>
                           </div></center>
+
+                          
                             
-                          <div class="dropdown">
-                            <button _ngcontent-aud-c1="" class="btn btn-continuar">Regresar</button> <!-- Botón principal con función onclick -->
-                            <div id="myDropdown" class="dropdown-content">
-                              <a href="pagina1.html" onclick="optionClicked(1)"></a>
-                            </div>
-                          </div>
-                          <script>
-                            function toggleDropdown() {
-                              document.getElementById("myDropdown").classList.toggle("show"); // Función para mostrar/ocultar el menú desplegable
+                          <style>
+
+                            .container {
+                                text-align: center;
+                                padding: 20px;
+                                background-color: #fff;
+                                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                                border-radius: 10px;
                             }
-                            
-                            function optionClicked(option) {
-        
-                               // Redirige a la página correspondiente según la opción seleccionada
-                             switch (option) {
-                            case 'Página 0':
-                            window.location.href = 'index.html';
-                            break;
-                            default:
-        
-              }
-            }
+                            .btn-siguiente {
+                                display: inline-block;
+                                padding: 12px 24px;
+                                font-size: 18px;
+                                background-color: #007bff;
+                                color: #fff;
+                                border: none;
+                                border-radius: 5px;
+                                cursor: pointer;
+                                transition: background-color 0.3s ease;
+                                text-decoration: none; /* Eliminamos la decoración de texto */
+                            }
+                            .btn-siguiente:hover {
+                                background-color: #0056b3; /* Cambio de color al pasar el ratón */
+                            }
+                        </style>
+                        </head>
+                        <body>
+                            <div class="container">
                         
-                            // Cierra el menú si el usuario hace clic fuera de él
-                            window.onclick = function(event) {
-                              if (!event.target.matches('.dropbtn')) {
-                                var dropdowns = document.getElementsByClassName("dropdown-content");
-                                for (var i = 0; i < dropdowns.length; i++) {
-                                  var openDropdown = dropdowns[i];
-                                  if (openDropdown.classList.contains('show')) {
-                                    openDropdown.classList.remove('show');
-                                  }
-                                }
-                              }
-                            }
-                          </script>
+                                <!-- Botón Siguiente -->
+                                <a href="pagina3.html" class="btn-siguiente">Continuar</a>
+                            </div>
+                        
+                        <div class="container">
+                        
+                            <!-- Botón Siguiente -->
+                            <a href="pagina2.html" class="btn-siguiente">Regresar</a>
+                        </div>
+</body>
         
 </body>
 </html>
